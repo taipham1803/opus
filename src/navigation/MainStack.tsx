@@ -37,7 +37,11 @@ export default function Main() {
       <MainStack.Screen
         name={Routes.JobDetail}
         component={JobDetail}
-        options={{headerShown: false, gestureEnabled: true}}
+        options={{
+          headerShown: false,
+          gestureEnabled: true,
+          presentation: 'fullScreenModal',
+        }}
       />
     </MainStack.Navigator>
   );

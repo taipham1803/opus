@@ -3,14 +3,14 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {Colors} from 'styles/palette';
 import {Routes} from './Routes';
-import Home from 'screens/Home';
+import MyJobs from 'screens/MyJobs';
 
 const MyJobsStack = createNativeStackNavigator();
 
 export const MyJobsStackContainer = () => {
   return (
     <MyJobsStack.Navigator
-      initialRouteName={Routes.Welcome}
+      initialRouteName={Routes.MyJobs}
       screenOptions={{
         headerShown: false,
         headerStyle: {
@@ -20,8 +20,8 @@ export const MyJobsStackContainer = () => {
         headerBackTitleVisible: false,
       }}>
       <MyJobsStack.Screen
-        name={Routes.Home}
-        component={Home}
+        name={Routes.MyJobs}
+        component={MyJobs}
         options={{headerShown: false}}
       />
     </MyJobsStack.Navigator>
