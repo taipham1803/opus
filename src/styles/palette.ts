@@ -15,6 +15,9 @@ export const Colors = {
     9: '#868686',
     light: '#E6E6E6',
   },
+  blur: {
+    1: 'rgba(0, 0, 0, 0.2)',
+  },
   interactive: {
     stroke: '#E3F8F4',
   },

@@ -15,6 +15,7 @@ import iconLocation from './icons/iconLocation.png';
 import iconSunnyDay from './icons/iconSunnyDay.png';
 import iconSpecialty from './icons/iconSpecialty.png';
 import iconCalendarNew from './icons/iconCalendarNew.png';
+import iconArrowDown from './icons/iconArrowDown.png';
 
 const icons = {
   iconSearch,
@@ -34,6 +35,7 @@ const icons = {
   iconSunnyDay,
   iconSpecialty,
   iconCalendarNew,
+  iconArrowDown,
 };
 
 import logoStackedColor from './images/logo_stacked_color.png';

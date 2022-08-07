@@ -11,10 +11,11 @@ export type ButtonAppearance =
 
 interface ButtonProps {
   title?: string;
-  style?: ViewStyle;
+  style?: ViewStyle[];
   appearance?: ButtonAppearance;
   disabled?: boolean;
   onPress?: () => void;
+  borderWidth?: number;
 }
 
 export const getButtonAppearanceStyles = ({
@@ -42,6 +43,7 @@ export const Button = ({
   appearance = 'primary',
   disabled = false,
   onPress = () => {},
+  borderWidth = 2,
 }: ButtonProps) => {
   const passedInProps = {
     appearance,
@@ -53,7 +55,7 @@ export const Button = ({
       onPress={onPress}
       style={[
         Style.con({py: 14, cen: true}),
-        Style.border({bor: 5, width: 2, color: Colors.primary}),
+        Style.border({bor: 5, width: borderWidth, color: Colors.primary}),
         ...appearanceStyles,
         style,
       ]}>

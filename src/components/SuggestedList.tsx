@@ -17,6 +17,7 @@ interface SuggestedListProps {
   data: SuggestJob[];
   showHeader?: boolean;
   orientation?: ListOrientation;
+  contentStyle?: ViewStyle;
 }
 
 export const SuggestedList = ({
@@ -25,6 +26,7 @@ export const SuggestedList = ({
   style,
   showHeader = true,
   orientation = 'horizontal',
+  contentStyle = {},
 }: SuggestedListProps) => {
   const nav = useNavigation();
   const handlePressSeeAll = () => {
@@ -57,7 +59,7 @@ export const SuggestedList = ({
       <FlatList
         data={data}
         {...(orientation === 'horizontal' ? {horizontal: true} : {})}
-        contentContainerStyle={Style.con({px: 16, py: 8})}
+        contentContainerStyle={[Style.con({px: 16, pt: 8}), contentStyle]}
         renderItem={({item}) => (
           <SuggestJobCard
             item={item}

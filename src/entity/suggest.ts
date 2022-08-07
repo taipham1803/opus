@@ -2,8 +2,18 @@ import {Source} from 'react-native-fast-image';
 
 export type JobProperty = {
   id: number | string;
-  icon: Source;
+  icon?: Source;
   title: string;
+  content: string;
+  fontSize?: number;
+  fontWeight?: string;
+  color?: string;
+};
+
+export type JobRequirement = {
+  id: number | string;
+  title: string;
+  value: string[];
   fontSize?: number;
   fontWeight?: string;
   color?: string;
@@ -14,6 +24,7 @@ export type Job = {
   title: string;
   company: string;
   properties: JobProperty[];
+  requirements: JobRequirement[];
   match: number;
   estimatedSalary: string;
   salaryTimeUnit: string;

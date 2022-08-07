@@ -29,12 +29,12 @@ export const AuthStackContainer = () => {
       <AuthStack.Screen
         name={Routes.SignIn}
         component={SignIn}
-        options={{headerShown: true, title: 'Sign in'.toUpperCase()}}
+        options={{headerShown: false, title: 'Sign in'.toUpperCase()}}
       />
       <AuthStack.Screen
         name={Routes.SignUp}
         component={SignUp}
-        options={{headerShown: true, title: 'Sign up'.toUpperCase()}}
+        options={{headerShown: false, title: 'Sign up'.toUpperCase()}}
       />
     </AuthStack.Navigator>
   );

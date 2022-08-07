@@ -15,6 +15,7 @@ interface PopularListProps {
   showHeader?: boolean;
   data: PopularCity[];
   toFixedSalary?: number;
+  contentStyle?: ViewStyle;
 }
 
 export const PopularList = ({
@@ -23,6 +24,7 @@ export const PopularList = ({
   style,
   showHeader = true,
   toFixedSalary = 2,
+  contentStyle = {},
 }: PopularListProps) => {
   const nav = useNavigation();
   const handlePressSeeAll = () => {
@@ -54,7 +56,7 @@ export const PopularList = ({
       )}
       <FlatList
         data={data}
-        contentContainerStyle={Style.con({p: 16})}
+        contentContainerStyle={[Style.con({p: 16}), contentStyle]}
         renderItem={({item}) => (
           <PopularCard item={item} toFixedSalary={toFixedSalary} />
         )}

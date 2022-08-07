@@ -28,7 +28,7 @@ export const DrawerStackContainer = () => {
       <DrawerStack.Screen
         name={Routes.BottomTabContainer}
         component={BottomTabContainer}
-        options={{headerShown: false}}
+        options={{headerShown: false, title: 'Home'}}
       />
     </DrawerStack.Navigator>
   );

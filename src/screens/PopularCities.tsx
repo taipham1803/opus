@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {NavigationProp} from '@react-navigation/core';
 import {Header} from 'components/Header';
 import {Colors, Style} from 'styles';
@@ -14,6 +14,7 @@ export default ({}: {navigation: NavigationProp<any>}) => {
         showHeader={false}
         style={Style.con({flex: 1})}
         data={dummyDataPopularCities}
+        contentStyle={Style.con({pb: 80})}
       />
     </SafeAreaView>
   );

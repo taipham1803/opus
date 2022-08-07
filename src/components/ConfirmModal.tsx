@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, ViewStyle} from 'react-native';
 import Modalbox from 'react-native-modalbox';
 import {Colors, Fonts, Style} from 'styles';
+// import {BottomModal} from './BottomModal';
 import {Button} from './Button';
 
 interface ConfirmModalProps {
@@ -17,6 +18,22 @@ export const ConfirmModal = ({
   onClosed,
   modalHeight = 200,
 }: ConfirmModalProps) => {
+  // return (
+  //   <BottomModal isOpen={open} height={modalHeight} style={style}>
+  //     <Text style={Fonts.t(16, Colors.blue[1], {wei: '600'})}>
+  //       {'Your request has been submitted'}
+  //     </Text>
+  //     <Text style={Fonts.t(14, Colors.blue[1], {t: 12})}>
+  //       {'Your recruiter will contact you shortly.'}
+  //     </Text>
+  //     <Button
+  //       title={'ok'.toUpperCase()}
+  //       style={Style.con({mt: 24})}
+  //       onPress={onClosed}
+  //       appearance="borderLess"
+  //     />
+  //   </BottomModal>
+  // );
   return (
     <Modalbox
       style={[

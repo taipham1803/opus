@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {NavigationProp} from '@react-navigation/core';
 
 import {Header} from 'components/Header';
@@ -15,6 +15,7 @@ export default ({}: {navigation: NavigationProp<any>}) => {
         showHeader={false}
         data={dummyDataSuggested}
         orientation="vertical"
+        contentStyle={Style.con({pb: 80})}
       />
     </SafeAreaView>
   );

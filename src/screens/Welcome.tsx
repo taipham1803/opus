@@ -1,5 +1,6 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {NavigationProp} from '@react-navigation/core';
 import FastImage from 'react-native-fast-image';
 import {Colors, Fonts, Style} from 'styles';

@@ -77,8 +77,8 @@ export const SuggestJobCard = ({style, item}: SuggestJobCardProps) => {
             </TouchableOpacity>
           </View>
         </FastImage>
-        <View style={Style.con({px: 16, pt: 12, pb: 12})}>
-          <View style={Style.con({direc: 'row'})}>
+        <View style={Style.con({flex: 1, px: 16, pt: 12, pb: 16})}>
+          <View style={Style.con({direc: 'row', mb: 2})}>
             <View style={Style.con({flex: 1})}>
               <Text style={Fonts.t(16, Colors.blue[2], {wei: '600'})}>
                 {item?.job?.title}
@@ -88,6 +88,9 @@ export const SuggestJobCard = ({style, item}: SuggestJobCardProps) => {
               </Text>
               <View style={Style.con({mt: 8})}>
                 {item.job.properties.map((property: JobProperty) => {
+                  if (!property.icon || !property.content) {
+                    return null;
+                  }
                   return (
                     <View
                       style={Style.con({direc: 'row', my: 2})}
@@ -104,7 +107,7 @@ export const SuggestJobCard = ({style, item}: SuggestJobCardProps) => {
                             wei: property.fontWeight ?? '500',
                           },
                         )}>
-                        {property.title}
+                        {property.content}
                       </Text>
                     </View>
                   );
@@ -133,7 +136,7 @@ export const SuggestJobCard = ({style, item}: SuggestJobCardProps) => {
               direc: 'row',
               items: 'flex-end',
               justify: 'flex-end',
-              mt: 2,
+              mt: 'auto',
             })}>
             <Text style={Fonts.t(12, Colors.black, {r: 6})}>{'Estimated'}</Text>
             <Text style={Fonts.t(16, Colors.black, {wei: '600', r: 4})}>
@@ -146,7 +149,7 @@ export const SuggestJobCard = ({style, item}: SuggestJobCardProps) => {
           <Button
             title={'PLEASE SUBMIT'.toUpperCase()}
             appearance="borderFull"
-            style={Style.con({mt: 8})}
+            style={Style.con({mt: 12})}
             onPress={handlePressSubmit}
           />
         </View>

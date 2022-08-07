@@ -1,5 +1,6 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {NavigationProp} from '@react-navigation/core';
 import FastImage from 'react-native-fast-image';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -9,6 +10,7 @@ import {images} from 'assets';
 import {Input} from 'components/Input';
 import {Button} from 'components/Button';
 import {Routes} from 'navigation';
+import {Header} from 'components/Header';
 
 interface SignUpParamsInterface {
   firstName: string;
@@ -41,6 +43,7 @@ export default ({navigation: nav}: {navigation: NavigationProp<any>}) => {
 
   return (
     <SafeAreaView style={Style.con({flex: 1, bg: Colors.white})}>
+      <Header leftAppearance="back" title="Sign up" />
       <KeyboardAwareScrollView enableOnAndroid={true} extraHeight={250}>
         <View style={Style.con({pt: 48, pb: 32, mt: 16, items: 'center'})}>
           <FastImage
