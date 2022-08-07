@@ -4,7 +4,7 @@ import {CommonActions, useNavigation} from '@react-navigation/core';
 
 import {Colors, Fonts, Style} from 'styles';
 import FastImage from 'react-native-fast-image';
-import {icons} from 'assets';
+import {icons, images} from 'assets';
 import {SuggestJob} from 'entity/suggest';
 import {SuggestJobCard} from './SuggestJobCard';
 import {Routes} from 'navigation';
@@ -58,8 +58,22 @@ export const SuggestedList = ({
       )}
       <FlatList
         data={data}
+        style={Style.con({mt: 8})}
         {...(orientation === 'horizontal' ? {horizontal: true} : {})}
-        contentContainerStyle={[Style.con({px: 16, pt: 8}), contentStyle]}
+        ListEmptyComponent={() => {
+          return (
+            <View style={Style.con({w: 343, h: 166, items: 'center'})}>
+              <FastImage
+                style={Style.con({w: 164, h: 136})}
+                source={images.noSuggest}
+              />
+              <Text style={Fonts.t(12, Colors.black, {t: 12})}>
+                {'No suggested jobs matches with your profile'}
+              </Text>
+            </View>
+          );
+        }}
+        contentContainerStyle={[Style.con({px: 16}), contentStyle]}
         renderItem={({item}) => (
           <SuggestJobCard
             item={item}

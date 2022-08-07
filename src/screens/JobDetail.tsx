@@ -141,7 +141,7 @@ export default ({navigation: nav}: {navigation: NavigationProp<any>}) => {
       <ConfirmModal
         open={confirmSubmitted.isOpen}
         onClosed={confirmSubmitted.onClose}
-        modalHeight={168 + 24}
+        modalHeight={162 + 20}
       />
     </View>
   );

@@ -11,7 +11,7 @@ const base = (
   color = Colors.black,
   lineHeight: number | undefined,
 ) => ({
-  fontSize: scaleFromFigma(fontSize),
+  fontSize,
   color,
   fontWeight,
   ...(typeof lineHeight === 'number' ? {lineHeight} : {}),

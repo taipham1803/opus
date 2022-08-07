@@ -157,7 +157,7 @@ export const SuggestJobCard = ({style, item}: SuggestJobCardProps) => {
       <ConfirmModal
         open={confirmSubmitted.isOpen}
         onClosed={confirmSubmitted.onClose}
-        modalHeight={162 + 24}
+        modalHeight={162 + 20}
       />
     </>
   );

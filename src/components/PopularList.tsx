@@ -6,7 +6,7 @@ import FastImage from 'react-native-fast-image';
 import {Colors, Fonts, Style} from 'styles';
 import {PopularCard} from './PopularCard';
 import {PopularCity} from 'entity/popular';
-import {icons} from 'assets';
+import {icons, images} from 'assets';
 import {Routes} from 'navigation';
 
 interface PopularListProps {
@@ -56,6 +56,20 @@ export const PopularList = ({
       )}
       <FlatList
         data={data}
+        style={Style.con({mt: 8})}
+        ListEmptyComponent={() => {
+          return (
+            <View style={Style.con({w: 343, h: 166, items: 'center'})}>
+              <FastImage
+                style={Style.con({w: 164, h: 136})}
+                source={images.noPopularCity}
+              />
+              <Text style={Fonts.t(12, Colors.black, {t: 12})}>
+                {'No cities matches your preferred locations'}
+              </Text>
+            </View>
+          );
+        }}
         contentContainerStyle={[Style.con({p: 16}), contentStyle]}
         renderItem={({item}) => (
           <PopularCard item={item} toFixedSalary={toFixedSalary} />
