@@ -32,7 +32,9 @@ export const BottomTabContainer = () => {
     return colors.buttonIconColor;
   };
   return (
-    <BottomTab.Navigator tabBar={props => <TabBar {...props} />}>
+    <BottomTab.Navigator
+      screenOptions={{}}
+      tabBar={props => <TabBar {...props} />}>
       <BottomTab.Screen
         key={`tab-${Routes.HomeStackContainer}`}
         name={Routes.HomeStackContainer}

@@ -56,5 +56,5 @@ yarn c
 
 - TypeScript v4.4.4
 - React Native v0.68.1, React v17.0.2
-- State management: Recoil, React Context
+- State management: MobX, React Context
 - ESLint

@@ -13,7 +13,7 @@ export const DrawerStackContainer = () => {
       initialRouteName={Routes.BottomTabContainer}
       defaultScreenOptions={{
         drawerType: 'front',
-        drawerPosition: 'right',
+        drawerPosition: 'left',
         drawerStyle: {
           width: '85%',
         },

@@ -7,6 +7,14 @@ import iconMyJob from './icons/iconMyJob.png';
 import iconTimecard from './icons/iconTimecard.png';
 import iconMenu from './icons/iconMenu.png';
 import iconChevronLeft from './icons/iconChevronLeft.png';
+import iconChevronSmall from './icons/iconChevronSmall.png';
+import iconShare from './icons/iconShare.png';
+import iconHeart from './icons/iconHeart.png';
+import iconHeartFull from './icons/iconHeartFull.png';
+import iconLocation from './icons/iconLocation.png';
+import iconSunnyDay from './icons/iconSunnyDay.png';
+import iconSpecialty from './icons/iconSpecialty.png';
+import iconCalendarNew from './icons/iconCalendarNew.png';
 
 const icons = {
   iconSearch,
@@ -18,37 +26,54 @@ const icons = {
   iconTimecard,
   iconMenu,
   iconChevronLeft,
+  iconChevronSmall,
+  iconShare,
+  iconHeart,
+  iconHeartFull,
+  iconLocation,
+  iconSunnyDay,
+  iconSpecialty,
+  iconCalendarNew,
 };
 
 import logoStackedColor from './images/logo_stacked_color.png';
 import undrawDatePicker from './images/undraw_date_picker.png';
+import certificate from './images/certificate.png';
+import timecard from './images/timecard.png';
+import noPopularCity from './images/noPopularCity.png';
+import noSuggest from './images/noSuggest.png';
 
-const images = {logoStackedColor, undrawDatePicker};
+const images = {
+  logoStackedColor,
+  undrawDatePicker,
+  certificate,
+  timecard,
+  noPopularCity,
+  noSuggest,
+};
 
 const fonts = {};
 
 import place1 from './placeholders/place1.png';
-import place2 from './placeholders/place2.jpeg';
-import place3 from './placeholders/place3.jpeg';
-import place4 from './placeholders/place4.jpeg';
-import place5 from './placeholders/place5.jpeg';
-import place6 from './placeholders/place6.jpeg';
-import place7 from './placeholders/place7.jpeg';
-import place8 from './placeholders/place8.jpeg';
-import place9 from './placeholders/place9.jpeg';
-import place10 from './placeholders/place10.jpeg';
+import place2 from './placeholders/place2.png';
+import popularCity1 from './placeholders/popularCity1.png';
+import popularCity2 from './placeholders/popularCity2.png';
+import popularCity3 from './placeholders/popularCity3.png';
+import popularCity4 from './placeholders/popularCity4.png';
+import popularCity5 from './placeholders/popularCity5.png';
+import popularCity6 from './placeholders/popularCity6.png';
+import popularCity7 from './placeholders/popularCity7.png';
 
 const placeholders = {
   place1,
   place2,
-  place3,
-  place4,
-  place5,
-  place6,
-  place7,
-  place8,
-  place9,
-  place10,
+  popularCity1,
+  popularCity2,
+  popularCity3,
+  popularCity4,
+  popularCity5,
+  popularCity6,
+  popularCity7,
 };
 
 export {icons, images, fonts, placeholders};

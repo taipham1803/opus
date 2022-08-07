@@ -3,9 +3,9 @@ import {Text, TouchableOpacity, ViewStyle} from 'react-native';
 import {Colors, Fonts, Style} from 'styles';
 
 export type ButtonAppearance =
-  | 'default'
   | 'primary'
   | 'secondary'
+  | 'borderFull'
   | 'borderLess'
   | 'danger';
 
@@ -18,7 +18,7 @@ interface ButtonProps {
 }
 
 export const getButtonAppearanceStyles = ({
-  appearance = 'default',
+  appearance = 'primary',
 }: ButtonProps) => {
   const styles = [];
 
@@ -26,6 +26,11 @@ export const getButtonAppearanceStyles = ({
     styles.push(Style.con({bg: Colors.interactive.stroke}));
   } else if (appearance === 'secondary') {
     styles.push(Style.con({bg: Colors.tran}));
+  } else if (appearance === 'borderFull') {
+    styles.push(Style.con({bg: Colors.interactive.stroke, py: 6, bor: 99}));
+  } else if (appearance === 'borderLess') {
+    styles.push(Style.con({bg: Colors.interactive.stroke}));
+    styles.push(Style.border({bor: 5, width: 0}));
   }
 
   return styles;

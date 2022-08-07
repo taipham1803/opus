@@ -7,6 +7,8 @@ import {Routes} from './Routes';
 import {AuthStackContainer} from './AuthStack';
 import {DrawerStackContainer} from './DrawerStack';
 
+import JobDetail from 'screens/JobDetail';
+
 const MainStack = createNativeStackNavigator();
 
 export default function Main() {
@@ -20,6 +22,7 @@ export default function Main() {
         },
         headerTitleAlign: 'center',
         headerBackTitleVisible: false,
+        gestureEnabled: false,
       }}>
       <MainStack.Screen
         name={Routes.AuthStackContainer}
@@ -29,7 +32,12 @@ export default function Main() {
       <MainStack.Screen
         name={Routes.DrawerStackContainer}
         component={DrawerStackContainer}
-        options={{headerShown: false}}
+        options={{headerShown: false, gestureEnabled: false}}
+      />
+      <MainStack.Screen
+        name={Routes.JobDetail}
+        component={JobDetail}
+        options={{headerShown: false, gestureEnabled: true}}
       />
     </MainStack.Navigator>
   );

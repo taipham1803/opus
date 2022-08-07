@@ -104,6 +104,7 @@ export type ContainerStyle = {
   over?: string;
   op?: number;
   rotate?: string;
+  minH?: number;
 };
 
 const con = ({
@@ -145,6 +146,7 @@ const con = ({
   over,
   op,
   rotate,
+  minH,
 }: ContainerStyle) =>
   ({
     ...(typeof flex === 'number' ? {flex: flex} : {}),
@@ -195,6 +197,7 @@ const con = ({
           height: size,
         }
       : {}),
+    ...(typeof minH === 'number' ? {minHeight: minH} : {}),
   } as any);
 
 const Style = {
