@@ -4,7 +4,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Colors} from 'styles/palette';
 import {Routes} from './Routes';
 
-import {AuthStackContainer} from './AuthStack';
 import {DrawerStackContainer} from './DrawerStack';
 
 import JobDetail from 'screens/JobDetail';
@@ -14,7 +13,7 @@ const MainStack = createNativeStackNavigator();
 export default function Main() {
   return (
     <MainStack.Navigator
-      initialRouteName={Routes.AuthStackContainer}
+      initialRouteName={Routes.DrawerStackContainer}
       screenOptions={{
         headerShown: false,
         headerStyle: {
@@ -24,11 +23,6 @@ export default function Main() {
         headerBackTitleVisible: false,
         gestureEnabled: false,
       }}>
-      <MainStack.Screen
-        name={Routes.AuthStackContainer}
-        component={AuthStackContainer}
-        options={{headerShown: false}}
-      />
       <MainStack.Screen
         name={Routes.DrawerStackContainer}
         component={DrawerStackContainer}

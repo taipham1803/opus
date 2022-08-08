@@ -4,11 +4,14 @@ import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {NavigationContainer} from '@react-navigation/native';
 import Toast from 'react-native-toast-message';
+import {observer} from 'mobx-react';
 
 import {MainStack} from 'navigation';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {Style} from 'styles';
 import {ThemeProvider} from './src/context/ThemeProvider';
+import {AuthStackContainer} from 'navigation/AuthStack';
+import userStore from './src/mobx/store';
 
 console.disableYellowBox = true;
 console.ignoredYellowBox = [
@@ -37,7 +40,11 @@ const App = () => {
         <ThemeProvider>
           <SafeAreaProvider>
             <NavigationContainer>
-              <MainStack />
+              {userStore?.isUserHasLogin ? (
+                <MainStack />
+              ) : (
+                <AuthStackContainer />
+              )}
             </NavigationContainer>
           </SafeAreaProvider>
         </ThemeProvider>
@@ -47,4 +54,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default observer(App);

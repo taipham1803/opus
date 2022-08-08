@@ -12,6 +12,7 @@ import {Input} from 'components/Input';
 import {Button} from 'components/Button';
 import {Routes} from 'navigation';
 import {Header} from 'components/Header';
+import userStore from './../mobx/store';
 
 interface SignInParamsInterface {
   email: string;
@@ -30,7 +31,8 @@ export default ({navigation: nav}: {navigation: NavigationProp<any>}) => {
 
   const onPressLogin = () => {
     console.log(params);
-    nav.navigate(Routes.DrawerStackContainer);
+    userStore.setHasLogin(true);
+    // nav.navigate(Routes.DrawerStackContainer);
   };
   const onPressForgotPassword = () => {};
   const onPressSignUp = () => {
