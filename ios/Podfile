@@ -4,6 +4,19 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 $FirebaseSDKVersion = '8.13.0'
 
 platform :ios, '11.0'
+project 'opus', {
+  'DebugDev' => :debug,
+  'DebugStaging' => :debug,
+  'Debug' => :debug,
+  'DebugBeta' => :debug,
+  'DebugQA' => :debug,
+  'ReleaseDev' => :release,
+  'ReleaseStaging' => :release,
+  'Release' => :release,
+  'ReleaseBeta' => :release,
+  'ReleaseQA' => :release,
+}
+
 install! 'cocoapods', :deterministic_uuids => false
 
 target 'opus' do

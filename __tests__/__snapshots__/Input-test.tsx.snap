@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Rendering should match to snapshot 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#E3F8F4",
+      "borderColor": "#99E1E1",
+      "borderRadius": 10,
+      "borderWidth": 4,
+      "bottom": undefined,
+      "justifyContent": "center",
+      "left": undefined,
+      "opacity": 1,
+      "paddingVertical": 23,
+      "right": undefined,
+      "top": undefined,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "auto",
+        "color": "#03606A",
+        "fontSize": 15,
+        "fontWeight": "500",
+        "marginBottom": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "opacity": undefined,
+        "textAlign": "auto",
+        "textAlignVertical": "auto",
+      }
+    }
+  >
+    Sign in!
+  </Text>
+</View>
+`;
+
+exports[`Input Rendering should match to snapshot 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "alignSelf": "auto",
+          "color": "#0E3F6C",
+          "fontSize": 12,
+          "fontWeight": "600",
+          "marginBottom": 13.142857142857146,
+          "marginHorizontal": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+          "marginVertical": undefined,
+          "opacity": undefined,
+          "textAlign": "auto",
+          "textAlignVertical": "auto",
+        },
+      ]
+    }
+  >
+    Input your name!
+  </Text>
+  <View
+    style={
+      Object {
+        "bottom": undefined,
+        "flexDirection": "row",
+        "left": undefined,
+        "right": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <TextInput
+      clearButtonMode="while-editing"
+      editable={true}
+      onChangeText={[Function]}
+      placeholder=""
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "alignSelf": "auto",
+            "color": "#24444E",
+            "fontSize": 14,
+            "fontWeight": "400",
+            "marginBottom": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "opacity": undefined,
+            "textAlign": "auto",
+            "textAlignVertical": "auto",
+          },
+          Object {
+            "bottom": undefined,
+            "flex": 1,
+            "left": undefined,
+            "right": undefined,
+            "top": undefined,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#C2D6DC",
+        "bottom": undefined,
+        "height": 2,
+        "left": undefined,
+        "marginTop": 13.142857142857146,
+        "right": undefined,
+        "top": undefined,
+      }
+    }
+  />
+</View>
+`;

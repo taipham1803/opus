@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Opus Test</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -46,7 +46,7 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>The app needs permission to access your microphone to record while racing, helping to prevent cheating</string>
 	<key>NSMotionUsageDescription</key>
-	<string>The app needs to use your device's motion tracking to determine your relative location, anti-fraud</string>
+	<string>The app needs to use your device&apos;s motion tracking to determine your relative location, anti-fraud</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>The app needs permission to access your photo gallery to take a profile picture</string>
 	<key>NSPhotoLibraryUsageDescription</key>

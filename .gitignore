@@ -64,3 +64,6 @@ buck-out/
 
 *.apk
 *.jks
+
+# react-native-config codegen
+ios/tmp.xcconfig

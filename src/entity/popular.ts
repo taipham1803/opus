@@ -12,5 +12,6 @@ export type PopularCity = {
   city: City;
   matches: number;
   estimateSalary: number;
+  currency: string;
   salaryTimeUnit: string;
 };

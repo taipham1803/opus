@@ -179,6 +179,7 @@ export const dummyDataPopularCities: PopularCity[] = [
     },
     matches: 15,
     estimateSalary: 2659.09,
+    currency: '$',
     salaryTimeUnit: '/wk',
   },
   {
@@ -191,6 +192,7 @@ export const dummyDataPopularCities: PopularCity[] = [
     },
     matches: 15,
     estimateSalary: 1859.3,
+    currency: '$',
     salaryTimeUnit: '/wk',
   },
   {
@@ -203,6 +205,7 @@ export const dummyDataPopularCities: PopularCity[] = [
     },
     matches: 15,
     estimateSalary: 2900.23,
+    currency: '$',
     salaryTimeUnit: '/wk',
   },
   {
@@ -215,6 +218,7 @@ export const dummyDataPopularCities: PopularCity[] = [
     },
     matches: 15,
     estimateSalary: 2650.45,
+    currency: '$',
     salaryTimeUnit: '/wk',
   },
   {
@@ -227,6 +231,7 @@ export const dummyDataPopularCities: PopularCity[] = [
     },
     matches: 15,
     estimateSalary: 1900.34,
+    currency: '$',
     salaryTimeUnit: '/wk',
   },
   {
@@ -239,6 +244,7 @@ export const dummyDataPopularCities: PopularCity[] = [
     },
     matches: 15,
     estimateSalary: 2720.32,
+    currency: '$',
     salaryTimeUnit: '/wk',
   },
   {
@@ -251,6 +257,7 @@ export const dummyDataPopularCities: PopularCity[] = [
     },
     matches: 15,
     estimateSalary: 2010.54,
+    currency: '$',
     salaryTimeUnit: '/wk',
   },
 ];

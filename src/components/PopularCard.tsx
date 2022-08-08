@@ -58,7 +58,9 @@ export const PopularCard = ({
           </View>
           <View style={Style.con({direc: 'row', items: 'flex-end'})}>
             <Text style={Fonts.t(16, Colors.black, {wei: '700'})}>
-              {item?.estimateSalary.toFixed(toFixedSalary)}
+              {`${item?.currency}${item?.estimateSalary.toFixed(
+                toFixedSalary,
+              )}`}
             </Text>
             <Text style={Fonts.t(12, Colors.black, {l: 4})}>
               {item?.salaryTimeUnit}

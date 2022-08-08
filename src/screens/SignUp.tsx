@@ -11,6 +11,7 @@ import {Input} from 'components/Input';
 import {Button} from 'components/Button';
 import {Routes} from 'navigation';
 import {Header} from 'components/Header';
+import userStore from 'mobx/store';
 
 interface SignUpParamsInterface {
   firstName: string;
@@ -35,7 +36,7 @@ export default ({navigation: nav}: {navigation: NavigationProp<any>}) => {
 
   const onPressSignUp = () => {
     console.log(params);
-    nav.navigate(Routes.DrawerStackContainer);
+    userStore.setHasLogin(true);
   };
   const onPressSignInHere = () => {
     nav.navigate(Routes.SignIn);

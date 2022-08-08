@@ -12,7 +12,15 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "xcode": "open ios/opus.xcworkspace",
     "studio": "open android/build.gradle",
-    "pod": "cd ios && pod install && cd .."
+    "pod": "cd ios && pod install && cd ..",
+    "ios-run-debug-develop": "react-native run-ios --scheme opusDev --configuration DebugDev",
+    "ios-run-debug-qa" : "react-native run-ios --scheme opusQA --configuration DebugQA",
+    "ios-run-debug-beta" : "react-native run-ios --scheme opusBeta --configuration DebugBeta",
+    "ios-run-debug-staging" : "react-native run-ios --scheme opusStaging --configuration DebugStaging",
+    "ios-run-debug-production" : "react-native run-ios --scheme opus --configuration Release",
+    "android-run-debug-develop": "react-native run-android --no-jetifier --variant=devDebug --appId 'com.opus.app.dev'",
+    "android-run-debug-staging": "react-native run-android --no-jetifier --variant=stagingDebug --appId 'com.opus.app.staging'",
+    "android-run-debug-product": "react-native run-android --no-jetifier --variant=productDebug --appId 'com.opus.app'"
   },
   "dependencies": {
     "@dwarvesf/react-hooks": "^0.7.0",
@@ -32,9 +40,10 @@
     "mobx-react": "^7.5.2",
     "react": "17.0.2",
     "react-native": "0.68.1",
+    "react-native-config": "^1.4.6",
     "react-native-dropdownalert": "^4.5.1",
     "react-native-fast-image": "^8.5.11",
-    "react-native-gesture-handler": "^2.4.0",
+    "react-native-gesture-handler": "^2.4.2",
     "react-native-haptic-feedback": "^1.13.1",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-modalbox": "^2.0.2",
@@ -83,6 +92,7 @@
   },
   "jest": {
     "preset": "react-native",
+    "setupFiles": ["./node_modules/react-native-gesture-handler/jestSetup.js"],
     "moduleFileExtensions": [
       "ts",
       "tsx",

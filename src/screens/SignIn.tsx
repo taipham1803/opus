@@ -32,7 +32,6 @@ export default ({navigation: nav}: {navigation: NavigationProp<any>}) => {
   const onPressLogin = () => {
     console.log(params);
     userStore.setHasLogin(true);
-    // nav.navigate(Routes.DrawerStackContainer);
   };
   const onPressForgotPassword = () => {};
   const onPressSignUp = () => {

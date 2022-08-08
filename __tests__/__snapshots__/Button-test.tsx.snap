@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Rendering should match to snapshot 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#E3F8F4",
+      "borderColor": "#99E1E1",
+      "borderRadius": 10,
+      "borderWidth": 4,
+      "bottom": undefined,
+      "justifyContent": "center",
+      "left": undefined,
+      "opacity": 1,
+      "paddingVertical": 23,
+      "right": undefined,
+      "top": undefined,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "auto",
+        "color": "#03606A",
+        "fontSize": 15,
+        "fontWeight": "500",
+        "marginBottom": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "opacity": undefined,
+        "textAlign": "auto",
+        "textAlignVertical": "auto",
+      }
+    }
+  >
+    Sign in!
+  </Text>
+</View>
+`;

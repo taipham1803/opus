@@ -5,13 +5,13 @@ import FastImage from 'react-native-fast-image';
 import {Colors, Fonts, Style} from 'styles';
 
 interface InputProps {
-  keyName: string;
+  keyName?: string;
   title?: string;
   style?: ViewStyle;
   secure?: boolean;
   disabled?: boolean;
   placeholder?: string;
-  onChange: (keyName: string, value: string) => void;
+  onChange?: (keyName: string, value: string) => void;
 }
 
 export const Input = ({
@@ -27,7 +27,7 @@ export const Input = ({
   const onPressEyeIcon = () => setShowPass(preState => !preState);
   const onChangeText = React.useCallback(
     _value => {
-      onChange(keyName, _value);
+      onChange && keyName && onChange(keyName, _value);
     },
     [onChange, keyName],
   );

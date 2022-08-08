@@ -9,7 +9,7 @@ export type ButtonAppearance =
   | 'borderLess'
   | 'danger';
 
-interface ButtonProps {
+export interface OpusButtonProps {
   title?: string;
   style?: ViewStyle[];
   appearance?: ButtonAppearance;
@@ -20,7 +20,7 @@ interface ButtonProps {
 
 export const getButtonAppearanceStyles = ({
   appearance = 'primary',
-}: ButtonProps) => {
+}: OpusButtonProps) => {
   const styles = [];
 
   if (appearance === 'primary') {
@@ -37,22 +37,27 @@ export const getButtonAppearanceStyles = ({
   return styles;
 };
 
-export const Button = ({
+export const Button: React.FC<OpusButtonProps> = ({
   title,
   style,
   appearance = 'primary',
   disabled = false,
-  onPress = () => {},
+  onPress,
   borderWidth = 2,
-}: ButtonProps) => {
+}) => {
   const passedInProps = {
     appearance,
     disabled,
   };
   const appearanceStyles = getButtonAppearanceStyles(passedInProps);
+  const onPressHandler = () => {
+    if (onPress) {
+      onPress();
+    }
+  };
   return (
     <TouchableOpacity
-      onPress={onPress}
+      onPress={onPressHandler}
       style={[
         Style.con({py: 14, cen: true}),
         Style.border({bor: 5, width: borderWidth, color: Colors.primary}),
