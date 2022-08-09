@@ -40,22 +40,27 @@ yarn c
 
 ## Available Scripts
 
+- Open xcode & vscode & start node server 
 ```sh 
 yarn c
 ```
 
+- Start node server
 ```sh 
 yarn dev
 ```
 
+- Run pod install in root project
 ```sh 
 yarn pod
 ```
 
+- Start iOS project in Xcode
 ```sh 
 yarn xcode
 ```
 
+- Open android project in Android Studio
 ```sh 
 yarn studio
 ```
